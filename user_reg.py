@@ -31,8 +31,14 @@ def valid_password(password):
     # Rule 1 :- Min 8 chars
     # Rule 2 :- Atleast 1 upper case
     # Rule 3 :- Atleast 1 numeric number in password
+    # Rule 4 :- Exactly 1 Charecter
     password_pattern = r"^(?=.*[A_Z])(?=.*\d).{8}$"
-    if re.match(password_pattern,password):
+    special_chars = r'!@#$%^&*()-+'
+    
+    
+    special_count = sum(1 for ch in password if ch in special_chars)
+    
+    if re.match(password_pattern, password) and special_count == 1:
         return "Valid Password"
     else:
         return "Invalid Password"
