@@ -29,7 +29,8 @@ def valid_phone(phone):
 
 def valid_password(password):
     # Rule 1 :- Min 8 chars
-    password_pattern = r"^[\w]{8}$"
+    # Rule 2 :- Atleast 1 upper case
+    password_pattern = r"^(?=.*[A_Z]).{8}$"
     if re.match(password_pattern,password):
         return "Valid Password"
     else:
