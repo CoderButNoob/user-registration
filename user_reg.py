@@ -13,6 +13,8 @@ def valid_last_name(last_name):
         return "Inavlid : Name Should be min 3 chars "
     
 def valid_email(email):
+    #validates all emailsamples
+    
     email_pattern = r"^[\w]+(\.[\w]+)?@[\w]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,}])?$"
 
     if re.match(email_pattern,email):
