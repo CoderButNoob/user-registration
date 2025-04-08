@@ -30,7 +30,8 @@ def valid_phone(phone):
 def valid_password(password):
     # Rule 1 :- Min 8 chars
     # Rule 2 :- Atleast 1 upper case
-    password_pattern = r"^(?=.*[A_Z]).{8}$"
+    # Rule 3 :- Atleast 1 numeric number in password
+    password_pattern = r"^(?=.*[A_Z])(?=.*\d).{8}$"
     if re.match(password_pattern,password):
         return "Valid Password"
     else:
@@ -41,7 +42,7 @@ first_name = input("Enter Fisrst Name : ")
 last_name = input("Enter Last Name : ")
 email = input("Enter Email : ")
 phone = input("ENter phone number in format +91 1234567891 : ")
-password = input("Enter Password")
+password = input("Enter Password : ")
 
 
 
