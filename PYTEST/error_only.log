@@ -1,0 +1,6 @@
+2025-04-09 14:48:41.319 | ERROR    | PYTEST.test_user_reg:test_positive:41 - [Positive Case Failed]  Case: {'first_name': 'Leslie', 'last_name': 'Li', 'email': 'mario16@example.org', 'phone': '+91 9887902276', 'password': 'A67028@a'}
+Reason: assert 'Inavlid : Name Should be min 3 chars ' is True
+ +  where 'Inavlid : Name Should be min 3 chars ' = valid_last_name('Li')
+2025-04-09 14:48:42.085 | ERROR    | PYTEST.test_user_reg:test_positive:41 - [Positive Case Failed]  Case: {'first_name': 'Ryan', 'last_name': 'Le', 'email': 'upeterson@example.com', 'phone': '+91 2829820489', 'password': 'A55379@a'}
+Reason: assert 'Inavlid : Name Should be min 3 chars ' is True
+ +  where 'Inavlid : Name Should be min 3 chars ' = valid_last_name('Le')
